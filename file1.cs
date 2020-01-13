@@ -7,19 +7,29 @@ namespace C0999999
         static void Main(string[] args)
         {
             ProblemData pd = new ProblemData();
+            Calculator calc = new Calculator(pd);
             Console.ReadLine();
         }
     }
 
     class Calculator
     {
+        ProblemData probData;
 
+        public Calculator(ProblemData pData)
+        {
+            probData = pData;
+        }
+        public void Add() {
+
+        }
     }
     class ProblemData
     {
         public ProblemData(){
             //Note : this is the constructor
                 Console.WriteLine("a");
+                this.GetUserInput();
             }
         int num1;
         int num2;
@@ -30,3 +40,4 @@ namespace C0999999
         }
     }
 }
+
