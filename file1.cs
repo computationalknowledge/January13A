@@ -8,7 +8,8 @@ namespace C0999999
         {
             ProblemData pd = new ProblemData();
             Calculator calc = new Calculator(pd);
-            Console.ReadLine();
+            Console.WriteLine(calc.Add());
+            
         }
     }
 
@@ -20,24 +21,27 @@ namespace C0999999
         {
             probData = pData;
         }
-        public void Add() {
-
+        public int Add() {
+            return probData.num1 + probData.num1;
         }
     }
     class ProblemData
     {
         public ProblemData(){
-            //Note : this is the constructor
-                Console.WriteLine("a");
+                //Note : this is the constructor
+                Console.WriteLine("  this is the constructor  ");
                 this.GetUserInput();
             }
-        int num1;
-        int num2;
+
+        public int num1;
+        public int num2;
+
         public void GetUserInput()
         {
-            num1 = Convert.ToInt16(Console.ReadLine());
-            num2 = Convert.ToInt16(Console.ReadLine());
+            // num1 = Convert.ToInt32(Console.ReadLine());
+            // num2 = Convert.ToInt32(Console.ReadLine());
+            num1 = 6;
+            num2 = 3;
         }
     }
 }
-
